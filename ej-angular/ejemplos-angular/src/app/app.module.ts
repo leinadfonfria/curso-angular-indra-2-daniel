@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { ComponenteAManoComponent } from './componente-a-mano/componente-a-mano.component';
+import { ComponenteCliComponent } from './componente-cli/componente-cli.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ComponenteAManoComponent
+    ComponenteAManoComponent,
+    ComponenteCliComponent
   ],
   imports: [
     BrowserModule
