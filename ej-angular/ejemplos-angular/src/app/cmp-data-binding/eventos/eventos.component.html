@@ -1,0 +1,18 @@
+<h4>Prevent default</h4>
+
+<form method="POST" action="/" (submit)="fun($event)">
+
+    <div>
+        <label for="mensaje">Escribe tu mensaje</label>
+        <input type="text" id="mensaje" name="mensaje">
+    </div>
+    <div>
+        <input type="submit" value="Enviar mensaje">
+    </div>
+
+</form>
+
+<p><a href="http://localhost:4200" (click)=fun($event)>ir</a></p>
+
+<hr>
+<h4>Stop propagation</h4>
