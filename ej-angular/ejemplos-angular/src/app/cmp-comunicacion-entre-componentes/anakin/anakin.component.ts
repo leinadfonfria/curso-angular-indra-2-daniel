@@ -18,8 +18,4 @@ export class AnakinComponent implements OnInit {
   cambiaNombreLeia(nuevoNombre: any) {//el mismo tipo que lo que envía el evento nombreCambiado
     this.nombreLeia = nuevoNombre
   }
-
-  cambiaNombreLuke(nuevoNombre: any) {//el mismo tipo que lo que envía el evento nombreCambiado
-    this.nombreLuke = nuevoNombre
-  }
 }
