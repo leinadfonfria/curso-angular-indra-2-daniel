@@ -1,0 +1,14 @@
+.producto {
+    width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    /*border: 1px solid black;*/
+}
+
+/*
+.desc-producto {
+    border: 1px solid black;
+}
+*/

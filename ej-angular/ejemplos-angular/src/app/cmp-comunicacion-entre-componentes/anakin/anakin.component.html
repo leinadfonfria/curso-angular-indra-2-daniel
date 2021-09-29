@@ -1,0 +1,14 @@
+<h1>Anakin</h1>
+<h3>-- Anakin --</h3>
+<p>Mis hijos son {{nombreLuke}} y {{nombreLeia}}</p>
+<hr>
+<app-luke
+    [nombre]="nombreLuke" 
+    [nombreHermana]="nombreLeia"
+    [handleChangeNombre]= "cambiaNombreLuke">
+</app-luke>
+<hr>
+<app-leia 
+    [nombre]="nombreLeia"
+    (nombreCambiado)="cambiaNombreLeia($event)">
+</app-leia>
