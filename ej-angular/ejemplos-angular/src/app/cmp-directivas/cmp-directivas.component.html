@@ -1,0 +1,48 @@
+<h1>Directivas</h1>
+<p>Componentes sin plantilla (sin HTML ni CSS)</p>
+<p>Pueden ser: </p>
+<p>Estructurales: cambian estructura página</p>
+<p>Atributo: añaden funcionalidades a las etiquetas que ya tenemos</p>
+
+<hr>
+<h3>De atributo</h3>
+<!-- <p [ngStyle]="{'text-decoration': 'underline'}">El texto subrayado y de color naranja</p> -->
+<p [ngStyle]="getStyles()">El texto subrayado y de color naranja</p>
+Estilos dinámicos:<input type="color" [(ngModel)]="colorLetra">
+<p [ngClass]="getClases()">El texto de color rojo con fondo amarillo</p>
+<button type="button" (click)="toggleFondo()">Fondo</button>
+
+<hr>
+<h3>Estructurales</h3>
+
+<!-- <h5>*ngIf</h5>
+<button *ngIf="darkMode" type="button" 
+    (click)="activaLightMode()">🌛</button>
+<button *ngIf="!darkMode" type="button" 
+    (click)="activaDarkMode()">🌞</button> -->
+
+<p>Else:</p>
+
+<!-- <button *ngIf="!darkMode; else lightModeBtn" type="button" 
+    (click)="activaDarkMode()">🌞</button>
+
+<ng-template #darkModeBtn>
+    <button type="button" 
+        (click)="activaLightMode()">🌛</button>
+</ng-template> -->
+
+<p>Template</p>
+
+<ng-container *ngIf="darkMode; then darkModeBtn else lightModeBtn">
+
+</ng-container>
+
+<ng-template #lightModeBtn>
+    <button type="button" 
+        (click)="activaDarkMode()">🌞</button>
+</ng-template>
+
+<ng-template #darkModeBtn>
+    <button type="button" 
+        (click)="activaLightMode()">🌛</button>
+</ng-template>

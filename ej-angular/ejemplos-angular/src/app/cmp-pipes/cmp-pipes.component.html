@@ -1,0 +1,15 @@
+<h2>Pipes</h2>
+<p>{{unTexto}}</p>
+<p>{{unTexto | uppercase}}</p>
+<p>{{unTexto | slice:0:4}} ...</p>
+<p>{{precio | currency:'€'}}</p>
+<p>{{fecha | date : 'dd/MM/yyyy'}}</p>
+<pre>{{persona | json}}</pre>
+<p>{{precio | doble:10}}</p>
+<p>{{'Hola mundo' | reverse}}</p>
+<p>{{'Hola mundo cruel hola' | hideWords:['Hola','cruel']}}</p>
+<p>{{mensaje | async}}</p>
+<pre>{{personaje | json}}</pre>
+<pre>{{personajePromise | async | json}}</pre><!-- Podemos anidar pipes -->
+<hr>
+

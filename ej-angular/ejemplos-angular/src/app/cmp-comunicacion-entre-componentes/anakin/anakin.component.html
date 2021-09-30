@@ -4,10 +4,13 @@
 <hr>
 <app-luke
     [nombre]="nombreLuke" 
-    [nombreHermana]="nombreLeia">
+    [nombreHermana]="nombreLeia"
+    [handleChangeNombre]="cambiaNombreLuke()">
 </app-luke>
 <hr>
 <app-leia 
     [nombre]="nombreLeia"
     (nombreCambiado)="cambiaNombreLeia($event)">
 </app-leia>
+
+<app-mi-boton textoBtn="Cambiar nombre a Luke" [handleClick]="cambiaNombreLuke2()"></app-mi-boton>

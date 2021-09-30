@@ -9,11 +9,14 @@ export class LukeComponent implements OnInit {
 
   @Input() nombre: string = ''
   @Input() nombreHermana: string = ''
-  @Input() handleChangeNombre = () => {}
+  @Input() handleChangeNombre: any;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  handleChangeNombreLuke(txt: string): any {
+    return () => this.handleChangeNombre(txt)
+  }
 }

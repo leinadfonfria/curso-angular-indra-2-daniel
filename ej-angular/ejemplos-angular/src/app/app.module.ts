@@ -14,6 +14,11 @@ import { AnakinComponent } from './cmp-comunicacion-entre-componentes/anakin/ana
 import { LukeComponent } from './cmp-comunicacion-entre-componentes/luke/luke.component';
 import { LeiaComponent } from './cmp-comunicacion-entre-componentes/leia/leia.component';
 import { MiBotonComponent } from './cmp-comunicacion-entre-componentes/mi-boton/mi-boton.component';
+import { CmpPipesComponent } from './cmp-pipes/cmp-pipes.component';
+import { ReversePipe } from './cmp-pipes/reverse.pipe';
+import { DoblePipe } from './cmp-pipes/doble.pipe';
+import { HideWordsPipe } from './cmp-pipes/hide-words.pipe';
+import { CmpDirectivasComponent } from './cmp-directivas/cmp-directivas.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,12 @@ import { MiBotonComponent } from './cmp-comunicacion-entre-componentes/mi-boton/
     AnakinComponent,
     LukeComponent,
     LeiaComponent,
-    MiBotonComponent
+    MiBotonComponent,
+    CmpPipesComponent,
+    ReversePipe,
+    DoblePipe,
+    HideWordsPipe,
+    CmpDirectivasComponent
   ],
   imports: [
     BrowserModule,
