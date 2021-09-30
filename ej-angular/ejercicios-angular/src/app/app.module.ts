@@ -5,13 +5,17 @@ import { AppComponent } from './app.component';
 import { CvDinamicoComponent } from './cv-dinamico/cv-dinamico.component';
 import { FormularioComponent } from './cv-dinamico/formulario/formulario.component';
 import { PreviewCvComponent } from './cv-dinamico/preview-cv/preview-cv.component';
+import { CmpPowemodeComponent } from './cmp-powemode/cmp-powemode.component';
+import { PowerModeDirective } from './cmp-powemode/power-mode.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     CvDinamicoComponent,
     FormularioComponent,
-    PreviewCvComponent
+    PreviewCvComponent,
+    CmpPowemodeComponent,
+    PowerModeDirective
   ],
   imports: [
     BrowserModule
