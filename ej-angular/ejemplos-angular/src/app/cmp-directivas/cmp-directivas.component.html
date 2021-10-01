@@ -15,7 +15,8 @@ Estilos dinámicos:<input type="color" [(ngModel)]="colorLetra">
 <hr>
 <h3>Estructurales</h3>
 
-<h5>*ngIf</h5><!--
+<h5>*ngIf</h5>
+<!--
 <button *ngIf="darkMode" type="button" 
     (click)="activaLightMode()">🌛</button>
 <button *ngIf="!darkMode" type="button" 
@@ -38,13 +39,11 @@ Estilos dinámicos:<input type="color" [(ngModel)]="colorLetra">
 </ng-container>
 
 <ng-template #lightModeBtn>
-    <button type="button" 
-        (click)="activaDarkMode()">🌞</button>
+    <button type="button" (click)="activaDarkMode()">🌞</button>
 </ng-template>
 
 <ng-template #darkModeBtn>
-    <button type="button" 
-        (click)="activaLightMode()">🌛</button>
+    <button type="button" (click)="activaLightMode()">🌛</button>
 </ng-template>
 
 <hr>
@@ -62,7 +61,7 @@ Estilos dinámicos:<input type="color" [(ngModel)]="colorLetra">
         modificables-->
         <hr *ngIf="isFirst">
         <p>{{i+1}} - {{ animal | titlecase }}</p>
-        <hr *ngIf="isLast"> 
+        <hr *ngIf="isLast">
     </li>
 </ul>
 
@@ -96,7 +95,7 @@ Estilos dinámicos:<input type="color" [(ngModel)]="colorLetra">
 
 <h5>Directivas propias</h5>
 <p appMarcar color="yellow">directiva marcar</p>
-        <!-- en este caso no funciona porque la propiedad
+<!-- en este caso no funciona porque la propiedad
         color tiene el alias appMarcar -->
 <p appMarcar="green">directiva marcar</p>
 <p [appMarcar]="colorLetra">directiva marcar</p>
@@ -110,3 +109,21 @@ el valor "colorLetra"-->
 
 <h5>Powermode</h5>
 <input type="text" powerMode>
+
+<hr>
+
+<h5>Filtro</h5>
+<label for="iAddColores"></label>
+    <input type="text" (change)="addColores($event)" id="iAddColores">
+<ul>
+    <li *ngFor="let color of colores">{{color}}</li>
+</ul>
+
+<div>
+    <label for="iFilterColores"></label>
+    <input type="text" id="iFilterColores" [(ngModel)]="filterColor">
+    <ul>
+        <li *ngFor="let color of colores | filtro:filterColor">{{color}}</li>
+        <!--Aplicamos el pipe en el array sobre el que itera el for-->
+    </ul>
+</div>

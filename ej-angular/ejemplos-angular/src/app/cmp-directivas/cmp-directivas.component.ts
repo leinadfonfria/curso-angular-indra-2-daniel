@@ -11,6 +11,8 @@ export class CmpDirectivasComponent implements OnInit {
   fondoPintado: boolean = true
   darkMode=false
 
+  filterColor = ''
+
   animales = ['perro','gato','canario','tortuga']
 
   animales2 = [
@@ -54,4 +56,15 @@ export class CmpDirectivasComponent implements OnInit {
   trackByAnimales2(animal: any) {
     return animal.id
   }
+
+  addColores(event: any) {
+    this.colores = [ ... this.colores, event.target.value]
+    /*
+    De este modo estamos clonando el array de colores y añadiendo el nuevo valor al final
+    Así, el pipe ya reconoce que el array ha sido modificado.
+    Al clonarlo, la referencia al array cambia.
+    */
+    //this.colores.push(event.target.value)
+  }
+
 }

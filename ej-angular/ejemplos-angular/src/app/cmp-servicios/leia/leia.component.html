@@ -1,0 +1,6 @@
+<h3>Leia</h3>
+<button (click)="darLaNoticia()">Noticia</button>
+<app-tarea 
+    *ngFor="let tarea of tareas"
+    [tarea]="tarea">
+</app-tarea>

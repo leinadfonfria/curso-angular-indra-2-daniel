@@ -22,6 +22,11 @@ import { CmpDirectivasComponent } from './cmp-directivas/cmp-directivas.componen
 import { MarcarDirective } from './cmp-directivas/marcar.directive';
 import { PowerModeDirective } from './cmp-directivas/power-mode.directive';
 import { FiltroPipe } from './cmp-directivas/filtro.pipe';
+import { CmpServiciosComponent } from './cmp-servicios/cmp-servicios.component';
+
+import { LukeComponent as SLukeComponent } from './cmp-servicios/luke/luke.component';
+import { LeiaComponent as SLeiaComponent } from './cmp-servicios/leia/leia.component';
+import { TareaComponent } from './cmp-servicios/tarea/tarea.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +49,11 @@ import { FiltroPipe } from './cmp-directivas/filtro.pipe';
     CmpDirectivasComponent,
     MarcarDirective,
     PowerModeDirective,
-    FiltroPipe
+    FiltroPipe,
+    CmpServiciosComponent,
+    SLukeComponent,
+    SLeiaComponent,
+    TareaComponent
   ],
   imports: [
     BrowserModule,
