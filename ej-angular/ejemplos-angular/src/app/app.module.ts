@@ -21,6 +21,7 @@ import { HideWordsPipe } from './cmp-pipes/hide-words.pipe';
 import { CmpDirectivasComponent } from './cmp-directivas/cmp-directivas.component';
 import { MarcarDirective } from './cmp-directivas/marcar.directive';
 import { PowerModeDirective } from './cmp-directivas/power-mode.directive';
+import { FiltroPipe } from './cmp-directivas/filtro.pipe';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { PowerModeDirective } from './cmp-directivas/power-mode.directive';
     HideWordsPipe,
     CmpDirectivasComponent,
     MarcarDirective,
-    PowerModeDirective
+    PowerModeDirective,
+    FiltroPipe
   ],
   imports: [
     BrowserModule,
