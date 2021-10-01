@@ -1,3 +1,21 @@
-.completada {
+
+div {
+    font-family: 'Courier New', Courier, monospace;
+    border: thin solid black;
+    width: 50%;
+    margin: 10px 10px 0px 0px;
+}
+
+div.completada {
     background-color: grey;
 }
+p.autor {
+    font-style: italic;
+    font-size: small;
+    text-align: right;
+    margin-right: 20px;
+}
+p.titulo {
+    margin-left: 20px;
+}
+
