@@ -14,6 +14,7 @@ export class PowerModeDirective {
   @HostBinding('style.left') left = '0px'
   @HostBinding('style.color') color = 'red'
 
+  //
   @HostListener('input') onInput() {
     //this.posicionTop+=random(-10,10);
     this.posicionLeft+=random(-10,10);
