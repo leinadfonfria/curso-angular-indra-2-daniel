@@ -1,0 +1,26 @@
+<h2>Routing (@angular/router)</h2>
+<div>
+    <div>
+        <ul>
+            <!-- <li><a href="/">Inicio</a></li> -->
+            <p><a [routerLink]="['/']">Inicio</a></p>
+            <!-- <li><a href="/nuevo-usuario">Nuevo usuario</a></li> -->
+            <p><a [routerLink]="['/nuevo-usuario']">Nuevo usuario</a></p>
+            <!-- routerLink hace un preventDefault para que a no recargue la página, luego
+    accede a la localización (location), para modificar la url del navegador, luego
+    elimina el componente que se estaba pintando en router-outlet, luego pinta el
+    nuevo componente asociado a la ruta que establecimos en app.routes.ts -->
+            <p><a [routerLink]="['/admin']">Admin (Lazy Loading)</a></p>
+        </ul>
+        <hr>
+    </div>
+
+    <div>
+        <router-outlet></router-outlet>
+    </div>
+</div>
+<!-- router-outlet es la etiqueta donde
+se pintarán los componentes asociados a la ruta
+indicada en el app.routes. si usamos rutas "hijas",
+que queremos que se pinten en la misma página, usaremos
+otro router-outlet en el componente "padre" -->

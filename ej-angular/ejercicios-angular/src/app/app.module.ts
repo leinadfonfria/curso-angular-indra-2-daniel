@@ -8,6 +8,10 @@ import { PreviewCvComponent } from './cv-dinamico/preview-cv/preview-cv.componen
 import { CmpPowemodeComponent } from './cmp-powemode/cmp-powemode.component';
 import { PowerModeDirective } from './cmp-powemode/power-mode.directive';
 import { UnsubscribeComponent } from './cmp-observables/unsubscribe/unsubscribe.component';
+import { CmpRoutingComponent } from './cmp-routing/cmp-routing.component';
+import { Error404Component } from './cmp-routing/error404/error404.component';
+import { NuevoUsuarioComponent } from './cmp-routing/nuevo-usuario/nuevo-usuario.component';
+import { ListaUsuariosComponent } from './cmp-routing/lista-usuarios/lista-usuarios.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { UnsubscribeComponent } from './cmp-observables/unsubscribe/unsubscribe.
     PreviewCvComponent,
     CmpPowemodeComponent,
     PowerModeDirective,
-    UnsubscribeComponent
+    UnsubscribeComponent,
+    CmpRoutingComponent,
+    Error404Component,
+    NuevoUsuarioComponent,
+    ListaUsuariosComponent
   ],
   imports: [
     BrowserModule

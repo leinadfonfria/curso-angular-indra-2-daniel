@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { RoutingModule } from './cmp-routing/app.routes';
 
 import { AppComponent } from './app.component';
 import { ComponenteAManoComponent } from './componente-a-mano/componente-a-mano.component';
@@ -29,8 +30,12 @@ import { LukeComponent as SLukeComponent } from './cmp-servicios/luke/luke.compo
 import { LeiaComponent as SLeiaComponent } from './cmp-servicios/leia/leia.component';
 import { TareaComponent } from './cmp-servicios/tarea/tarea.component';
 import { CmpObservablesComponent } from './cmp-observables/cmp-observables.component';
-import { UnsubscribeComponent } from './cmp-observables/unsubscribe/unsubscribe.component';
 import { CmpHttpComponent } from './cmp-http/cmp-http.component';
+import { CmpRoutingComponent } from './cmp-routing/cmp-routing.component';
+import { Error404Component } from './cmp-routing/error404/error404.component';
+import { NuevoUsuarioComponent } from './cmp-routing/nuevo-usuario/nuevo-usuario.component';
+import { ListaUsuariosComponent } from './cmp-routing/lista-usuarios/lista-usuarios.component';
+import { InfoUsuarioComponent } from './cmp-routing/info-usuario/info-usuario.component';
 
 @NgModule({
   declarations: [
@@ -59,13 +64,18 @@ import { CmpHttpComponent } from './cmp-http/cmp-http.component';
     SLeiaComponent,
     TareaComponent,
     CmpObservablesComponent,
-    UnsubscribeComponent,
-    CmpHttpComponent
+    CmpHttpComponent,
+    CmpRoutingComponent,
+    Error404Component,
+    NuevoUsuarioComponent,
+    ListaUsuariosComponent,
+    InfoUsuarioComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

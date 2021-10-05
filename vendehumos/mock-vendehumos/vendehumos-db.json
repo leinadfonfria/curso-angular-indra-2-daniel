@@ -19,6 +19,7 @@
         {
             "id": 1,
             "nombre": "Señor Vendehumos Rodríguez",
+            "avatar": "img/vh_rodriguez.jpg",
             "rrss": [
                 "http://facebook.com/vendehumos-rodriguez",
                 "http://instagram.com/vendehumos-rodriguez"
@@ -34,6 +35,7 @@
         {
             "id": 2,
             "nombre": "Señor Vendehumos Pérez",
+            "avatar": "img/vh_perez.jpg",
             "rrss": [
                 "http://facebook.com/vendehumos-perez",
                 "http://instagram.com/vendehumos-perez"
