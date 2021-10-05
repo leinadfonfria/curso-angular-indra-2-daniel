@@ -7,6 +7,7 @@ import { FormularioComponent } from './cv-dinamico/formulario/formulario.compone
 import { PreviewCvComponent } from './cv-dinamico/preview-cv/preview-cv.component';
 import { CmpPowemodeComponent } from './cmp-powemode/cmp-powemode.component';
 import { PowerModeDirective } from './cmp-powemode/power-mode.directive';
+import { UnsubscribeComponent } from './cmp-observables/unsubscribe/unsubscribe.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PowerModeDirective } from './cmp-powemode/power-mode.directive';
     FormularioComponent,
     PreviewCvComponent,
     CmpPowemodeComponent,
-    PowerModeDirective
+    PowerModeDirective,
+    UnsubscribeComponent
   ],
   imports: [
     BrowserModule

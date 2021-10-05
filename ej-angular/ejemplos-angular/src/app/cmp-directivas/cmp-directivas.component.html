@@ -127,3 +127,11 @@ el valor "colorLetra"-->
         <!--Aplicamos el pipe en el array sobre el que itera el for-->
     </ul>
 </div>
+
+<div>
+    <ul>
+        <li *ngFor="let animal of animales3 trackBy:trackById">
+            {{animal.tipo}}
+        </li>
+    </ul>
+</div>

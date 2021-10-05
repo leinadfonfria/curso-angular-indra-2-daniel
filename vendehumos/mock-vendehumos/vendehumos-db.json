@@ -1,0 +1,50 @@
+{
+    "usuarios": [
+        {
+            "id": 1,
+            "nombre": "pepe",
+            "foto": "/img/pepe.jpg",
+            "password": "1234",
+            "email": "pepe@email.com"
+        },
+        {
+            "id": 2,
+            "nombre": "juan",
+            "foto": "/img/juan.jpg",
+            "password": "1234",
+            "email": "pepe@email.com"
+        }
+    ],
+    "vendehumos": [
+        {
+            "id": 1,
+            "nombre": "Señor Vendehumos Rodríguez",
+            "rrss": [
+                "http://facebook.com/vendehumos-rodriguez",
+                "http://instagram.com/vendehumos-rodriguez"
+            ],
+            "categoria": [
+                "cuñado"
+            ],
+            "descripcion": "Descubridor de grandes chollos. Si le das tu dinero te abrirá un nuevo mundo de posibilidades",
+            "votos": 0,
+            "fechaAlta": "2020-06-01",
+            "usuarioId": 1
+        },
+        {
+            "id": 2,
+            "nombre": "Señor Vendehumos Pérez",
+            "rrss": [
+                "http://facebook.com/vendehumos-perez",
+                "http://instagram.com/vendehumos-perez"
+            ],
+            "categoria": [
+                "religión"
+            ],
+            "descripcion": "Multiplica tu dinero utilizando el antiguo método que usó Jesús para multiplicar los panes y los peces",
+            "votos": 0,
+            "fechaAlta": "2020-05-01",
+            "usuarioId": 2
+        }
+    ]
+}

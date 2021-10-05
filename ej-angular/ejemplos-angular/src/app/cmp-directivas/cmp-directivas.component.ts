@@ -22,11 +22,26 @@ export class CmpDirectivasComponent implements OnInit {
     {id:2, tipo: 'gato'},    
   ]
 
+  animales3 = [
+    {id:1, tipo: 'perro'},
+    {id:3, tipo: 'canario'},
+    {id:4, tipo: 'tortuga'},
+    {id:2, tipo: 'gato'},    
+  ]
+
   colores=['orange','blue','red']
 
   constructor() { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.animales3 = [
+        {id:1, tipo: 'gato'},
+        {id:3, tipo: 'canario'},
+        {id:4, tipo: 'tortuga'},
+        {id:2, tipo: 'perro'},    
+      ]
+    }, 5000)
   }
 
   getStyles() {
@@ -54,6 +69,13 @@ export class CmpDirectivasComponent implements OnInit {
     return index //el índice es único y el animal puede no serlo
   }
   trackByAnimales2(animal: any) {
+    return animal.id
+  }
+
+  trackById(index: number, animal: any): number {
+    //evita repintar toda la lista
+    //si cambia alguno de los elementos
+    //de la lista
     return animal.id
   }
 
