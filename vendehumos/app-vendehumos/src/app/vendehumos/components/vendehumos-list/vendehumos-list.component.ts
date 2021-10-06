@@ -1,4 +1,7 @@
+import { HttpEvent } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Vendehumos } from '../../classes/vendehumos';
+import { VendehumosHttpClientService } from '../../services/vendehumos-http-client.service';
 
 @Component({
   selector: 'app-vendehumos-list',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VendehumosListComponent implements OnInit {
 
-  constructor() { }
+  vendehumosList: Array<Vendehumos> = []
+
+  constructor( 
+    private vendehumosService : VendehumosHttpClientService
+  ) { }
 
   ngOnInit(): void {
+    this.vendehumosService.listVendehumos().subscribe((vendehumosList) => {
+      this.vendehumosList = vendehumosList
+    })
   }
-
 }

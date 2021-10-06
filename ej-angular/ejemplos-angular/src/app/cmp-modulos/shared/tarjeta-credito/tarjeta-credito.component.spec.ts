@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CmpHttpComponent } from './cmp-http.component';
+import { TarjetaCreditoComponent } from './tarjeta-credito.component';
 
-describe('CmpHttpComponent', () => {
-  let component: CmpHttpComponent;
-  let fixture: ComponentFixture<CmpHttpComponent>;
+describe('TarjetaCreditoComponent', () => {
+  let component: TarjetaCreditoComponent;
+  let fixture: ComponentFixture<TarjetaCreditoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CmpHttpComponent ]
+      declarations: [ TarjetaCreditoComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CmpHttpComponent);
+    fixture = TestBed.createComponent(TarjetaCreditoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

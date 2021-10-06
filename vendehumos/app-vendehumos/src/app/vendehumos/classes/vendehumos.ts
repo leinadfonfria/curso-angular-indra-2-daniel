@@ -10,7 +10,7 @@ export class Vendehumos {
         public categorias: Array<string>,
         public descripcion: string,
         public votos: number,
-        public fechaAlta: Date = new Date(),
+        public fechaAlta: Date,
         public usuarioId: number
     ){}
 }

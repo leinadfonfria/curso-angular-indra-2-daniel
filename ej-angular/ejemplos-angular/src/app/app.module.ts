@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RoutingModule } from './cmp-routing/app.routes';
+import { SharedModule } from './cmp-modulos/shared/shared.module';
 
 import { AppComponent } from './app.component';
 import { ComponenteAManoComponent } from './componente-a-mano/componente-a-mano.component';
@@ -36,6 +37,9 @@ import { Error404Component } from './cmp-routing/error404/error404.component';
 import { NuevoUsuarioComponent } from './cmp-routing/nuevo-usuario/nuevo-usuario.component';
 import { ListaUsuariosComponent } from './cmp-routing/lista-usuarios/lista-usuarios.component';
 import { InfoUsuarioComponent } from './cmp-routing/info-usuario/info-usuario.component';
+import { CmpModulosComponent } from './cmp-modulos/cmp-modulos.component';
+import { TokenInterceptor } from './cmp-http/token.interceptor';
+import { CacheInterceptor } from './cmp-http/cache.interceptor';
 
 @NgModule({
   declarations: [
@@ -69,15 +73,28 @@ import { InfoUsuarioComponent } from './cmp-routing/info-usuario/info-usuario.co
     Error404Component,
     NuevoUsuarioComponent,
     ListaUsuariosComponent,
-    InfoUsuarioComponent
+    InfoUsuarioComponent,
+    CmpModulosComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    RoutingModule
+    RoutingModule,
+    SharedModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: CacheInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

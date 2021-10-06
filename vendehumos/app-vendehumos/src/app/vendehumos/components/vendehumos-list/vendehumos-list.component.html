@@ -1,1 +1,5 @@
-<p>vendehumos-list works!</p>
+<div class="vendehumos-list-container">
+    <div *ngFor="let vendehumos of vendehumosList">
+        <app-vendehumos-list-elem [vendehumos]="vendehumos"></app-vendehumos-list-elem>
+    </div>
+</div>

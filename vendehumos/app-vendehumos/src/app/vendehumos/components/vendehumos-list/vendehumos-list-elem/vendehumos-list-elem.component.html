@@ -1,0 +1,17 @@
+<div class="vendehumos-list-elem">
+    <div class="avatar">
+        avatar
+    </div>
+    <div>
+        <h3><a [routerLink]="['detail',vendehumos.id]"> {{vendehumos.nombre}}</a></h3>
+        <p>{{vendehumos.descripcion}}</p>
+    </div>
+    <div class="votar">
+        <p>{{vendehumos.votos}}</p>
+        <button type="button" (click)="votar()">Votar</button>
+    </div>
+</div>
+
+<div>
+    <router-outlet></router-outlet>
+</div>
